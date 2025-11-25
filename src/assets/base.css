@@ -1,13 +1,6 @@
 /* CSS reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Design tokens */
-:root {
-  --color-primary: #42b883;
+  padding: 2vh;
 }
 
 /* Base styles */

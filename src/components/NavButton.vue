@@ -12,15 +12,13 @@ const onClick = (e: MouseEvent) => {
 </script>
 
 <template>
-  <a class="tab" :href="href" :class="{ active }" @click="onClick">
+  <a class="button" :href="href" :class="{ active }" @click="onClick">
     <slot />
   </a>
 </template>
 
 <style scoped>
-.tab {
-  display: flex;
-  flex-direction: column;
+.button {
   text-align: center;
   border: 1px;
   border-color: 000019;
@@ -28,5 +26,10 @@ const onClick = (e: MouseEvent) => {
   background-color: white;
   color: #000019;
   text-decoration: none;
+  border-radius: 10px;
+}
+.button:hover {
+  color: white;
+  background-color: #000019;
 }
 </style>
