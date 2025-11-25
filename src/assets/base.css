@@ -1,0 +1,19 @@
+/* CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Design tokens */
+:root {
+  --color-primary: #42b883;
+}
+
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #ffff;
+  background-color: #000019;
+}

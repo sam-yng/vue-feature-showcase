@@ -1,17 +1,25 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink } from 'vue-router'
+import NavButton from './components/NavButton.vue'
 </script>
 
 <template>
-  <h1>Hello App!</h1>
-  <p><strong>Current route path:</strong> {{ $route.fullPath }}</p>
-  <nav>
-    <RouterLink to="/">Go to Home</RouterLink>
-    <RouterLink to="/about">Go to About</RouterLink>
-  </nav>
   <main>
-    <RouterView />
+    <h1>Welcome!</h1>
+    <p>Let's explore some bootleg documentation</p>
+    <RouterLink class="router-link" to="/home" customer v-slot="{ navigate, href, isActive }">
+      <NavButton :href="href" :active="isActive" @click="navigate"> Home </NavButton>
+    </RouterLink>
   </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+.router-link {
+  text-decoration: none;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+}
+</style>
