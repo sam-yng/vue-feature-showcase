@@ -24,8 +24,4 @@ import NavContainer from '@/components/NavContainer.vue'
   </NavContainer>
 </template>
 
-<style scoped>
-.router-link {
-  text-decoration: none;
-}
-</style>
+<style scoped></style>

@@ -2,6 +2,7 @@
 defineProps<{
   href: string
   active: boolean
+  isReturn?: boolean
 }>()
 
 const emit = defineEmits(['click'])
@@ -12,7 +13,11 @@ const onClick = (e: MouseEvent) => {
 </script>
 
 <template>
-  <a class="button" :href="href" :class="{ active }" @click="onClick">
+  <a
+    :href="href"
+    :class="{ active, 'return-button': isReturn, button: !isReturn }"
+    @click="onClick"
+  >
     <slot />
   </a>
 </template>
@@ -32,5 +37,12 @@ const onClick = (e: MouseEvent) => {
 .button:hover {
   color: white;
   background-color: #000019;
+}
+.return-button {
+  text-align: center;
+  text-decoration: none;
+}
+.return-button:hover {
+  color: green;
 }
 </style>
