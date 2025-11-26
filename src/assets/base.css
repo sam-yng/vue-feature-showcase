@@ -1,12 +1,10 @@
 /* CSS reset */
 * {
-  padding: 2vh;
 }
 
 /* Base styles */
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.5;
   color: #ffff;
   background-color: #000019;
 }

@@ -3,9 +3,13 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <main>
+  <main class="view">
     <RouterView />
   </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+.view {
+  padding: 4vw;
+}
+</style>

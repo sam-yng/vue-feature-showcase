@@ -27,6 +27,7 @@ const onClick = (e: MouseEvent) => {
   color: #000019;
   text-decoration: none;
   border-radius: 10px;
+  padding: 15px;
 }
 .button:hover {
   color: white;
