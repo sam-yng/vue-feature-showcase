@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
-defineProps<{
+const props = defineProps<{
   href: string
   active: boolean
   isReturn?: boolean
@@ -10,6 +11,8 @@ defineProps<{
 }>()
 
 const emit = defineEmits(['click'])
+
+const isNavAction = computed(() => props.isReturn || props.isNext)
 
 const onClick = (e: MouseEvent) => {
   emit('click', e)
@@ -19,7 +22,7 @@ const onClick = (e: MouseEvent) => {
 <template>
   <a
     :href="href"
-    :class="{ active, 'return-next-button': isReturn || isNext, button: !isReturn && !isNext }"
+    :class="{ active, 'linear-nav-button': isNavAction, 'nav-button': !isNavAction }"
     @click="onClick"
   >
     <FontAwesomeIcon class="icon-left" v-if="isReturn" :icon="faArrowLeft" />
@@ -29,7 +32,7 @@ const onClick = (e: MouseEvent) => {
 </template>
 
 <style scoped>
-.button {
+.nav-button {
   text-align: center;
   border: 1px;
   border-color: 000019;
@@ -40,16 +43,16 @@ const onClick = (e: MouseEvent) => {
   border-radius: 10px;
   padding: 15px;
 }
-.button:hover {
+.nav-button:hover {
   color: white;
   background-color: #000019;
 }
-.return-next-button {
+.linear-nav-button {
   text-align: center;
   text-decoration: none;
   color: white;
 }
-.return-next-button:hover {
+.linear-nav-button:hover {
   color: #ff2c8b;
 }
 .icon-left {

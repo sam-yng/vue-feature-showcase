@@ -1,22 +1,9 @@
 <script setup lang="ts">
-import { RouterView, useRoute } from 'vue-router'
-import { computed } from 'vue'
+import { RouterView } from 'vue-router'
 import NavButton from './components/NavButton.vue'
-import { routes } from './router'
+import { useNavigation } from './composables/useNavigation'
 
-const route = useRoute()
-
-// Derive route order from router configuration
-const routeOrder = routes.map((r) => r.path)
-
-// Compute the next route
-const nextRoute = computed(() => {
-  const currentIndex = routeOrder.indexOf(route.path)
-  if (currentIndex === -1 || currentIndex === routeOrder.length - 1) {
-    return routeOrder[1] // No next route if current route not found or is last
-  }
-  return routeOrder[currentIndex + 1]
-})
+const { nextRoute } = useNavigation()
 </script>
 
 <template>
