@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
 import NavButton from '../components/NavButton.vue'
-import NavContainer from '@/components/NavContainer.vue'
 </script>
 
 <template>
   <main>
     <h1>Welcome!</h1>
     <p>Let's explore some bootleg documentation</p>
-    <NavContainer>
+    <div>
       <RouterLink
         class="router-link"
         to="/reactivity"
@@ -27,8 +26,15 @@ import NavContainer from '@/components/NavContainer.vue'
           >Class and Style Bindings</NavButton
         >
       </RouterLink>
-    </NavContainer>
+    </div>
   </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+div {
+  padding-top: 4vh;
+}
+main {
+  text-align: center;
+}
+</style>

@@ -37,15 +37,16 @@ const onClick = (e: MouseEvent) => {
   border: 1px;
   border-color: 000019;
   border-style: solid;
-  background-color: white;
-  color: #000019;
+  background-color: #000019;
+  color: white;
   text-decoration: none;
   border-radius: 10px;
   padding: 15px;
+  margin: 1vw;
 }
 .nav-button:hover {
-  color: white;
-  background-color: #000019;
+  background-color: white;
+  color: #000019;
 }
 .linear-nav-button {
   text-align: center;

@@ -1,7 +1,13 @@
 <script setup lang="ts"></script>
 
 <template>
-  <h1>Computed Properties</h1>
+  <main>
+    <h1>Computed Properties</h1>
+    <pre>
+      <code>
+      </code>
+    </pre>
+  </main>
 </template>
 
 <style scoped></style>

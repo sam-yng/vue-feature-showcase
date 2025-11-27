@@ -3,4 +3,10 @@
 .content {
   margin-right: auto;
   margin-left: auto;
+  padding: 3vw;
+}
+
+.router-link {
+  text-decoration: none;
+  margin: auto;
 }
