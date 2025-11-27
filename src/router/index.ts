@@ -3,7 +3,7 @@ import HomeView from '@/views/HomeView.vue'
 import ReactivityView from '@/views/ReactivityView.vue'
 import ComputedView from '@/views/ComputedView.vue'
 
-const routes = [
+export const routes = [
   { path: '/', component: HomeView },
   { path: '/reactivity', component: ReactivityView },
   { path: '/computed', component: ComputedView },

@@ -8,5 +8,8 @@
 
 <style scoped>
 .container {
+  display: flex;
+  gap: 1vw;
+  padding-top: 3vh;
 }
 </style>
