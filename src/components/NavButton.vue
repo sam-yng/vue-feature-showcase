@@ -35,7 +35,6 @@ const onClick = (e: MouseEvent) => {
 .nav-button {
   text-align: center;
   border: 1px;
-  border-color: 000019;
   border-style: solid;
   background-color: #000019;
   color: white;

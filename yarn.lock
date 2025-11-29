@@ -643,6 +643,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@highlightjs/vue-plugin@npm:2.1.0":
+  version: 2.1.0
+  resolution: "@highlightjs/vue-plugin@npm:2.1.0"
+  peerDependencies:
+    highlight.js: ^11.0.1
+    vue: ^3
+  checksum: 10c0/c2f71940606319d8505c2adcc552ae57a48fb3ac19a2b495ea716ced1cc0828db17226b0912c8698f7e112cdad74b4fc9eb450f68cbd800eb91f1cced56f275b
+  languageName: node
+  linkType: hard
+
 "@humanfs/core@npm:^0.19.1":
   version: 0.19.1
   resolution: "@humanfs/core@npm:0.19.1"
@@ -2283,6 +2293,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"highlight.js@npm:^11.11.1":
+  version: 11.11.1
+  resolution: "highlight.js@npm:11.11.1"
+  checksum: 10c0/40f53ac19dac079891fcefd5bd8a21cf2e8931fd47da5bd1dca73b7e4375c1defed0636fc39120c639b9c44119b7d110f7f0c15aa899557a5a1c8910f3c0144c
+  languageName: node
+  linkType: hard
+
 "hookable@npm:^5.5.3":
   version: 5.5.3
   resolution: "hookable@npm:5.5.3"
@@ -3676,6 +3693,7 @@ __metadata:
     "@fortawesome/fontawesome-svg-core": "npm:^7.1.0"
     "@fortawesome/free-solid-svg-icons": "npm:^7.1.0"
     "@fortawesome/vue-fontawesome": "npm:^3.1.2"
+    "@highlightjs/vue-plugin": "npm:2.1.0"
     "@tsconfig/node22": "npm:^22.0.2"
     "@types/node": "npm:^22.18.11"
     "@vitejs/plugin-vue": "npm:^6.0.1"
@@ -3684,6 +3702,7 @@ __metadata:
     "@vue/tsconfig": "npm:^0.8.1"
     eslint: "npm:^9.37.0"
     eslint-plugin-vue: "npm:~10.5.0"
+    highlight.js: "npm:^11.11.1"
     jiti: "npm:^2.6.1"
     npm-run-all2: "npm:^8.0.4"
     prettier: "npm:3.6.2"
