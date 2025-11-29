@@ -1,19 +1,15 @@
 <script setup lang="ts">
-const demoVisible = defineModel<boolean>('demoVisible', { default: false })
-
-const toggleVisibility = () => {
-  demoVisible.value = !demoVisible.value
-}
+const props = defineProps<{ isDemo: boolean }>()
 </script>
 
 <template>
-  <div class="demo-container" @click="toggleVisibility">
-    <pre v-if="!demoVisible">
+  <div class="demo-container">
+    <pre v-if="!props.isDemo">
       <code>
 				<slot />
 			</code>
     </pre>
-    <div v-else>
+    <div class="demo-contents" v-else>
       <slot />
     </div>
   </div>
@@ -26,19 +22,19 @@ const toggleVisibility = () => {
   overflow-x: auto;
   margin: 1rem;
   overflow-x: auto;
-  max-width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
   border: 1px;
   border-style: solid;
 }
 code {
   color: white;
 }
-.demo-container:hover {
+.demo-contents {
+  margin: auto;
+}
+/* .demo-container:hover {
   color: #ff2c8b;
 }
 .demo-container:hover code {
   color: #ff2c8b;
-}
+} */
 </style>

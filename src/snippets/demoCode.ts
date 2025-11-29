@@ -19,7 +19,7 @@ export const reactiveDemoCode = `
     count: number
   }
 
-  const state: State = reactive({ count: 0 })
+  const state: State = reactive({ count: 10 })
 
   <button @click="state.count++">
     {{ state.count }}
