@@ -1,17 +1,28 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const demoVisible = defineModel<boolean>('demoVisible', { default: false })
+
+const toggleVisibility = () => {
+  demoVisible.value = !demoVisible.value
+}
+</script>
 
 <template>
-  <pre class="demo-container">
-			<code>
+  <div class="demo-container" @click="toggleVisibility">
+    <pre v-if="!demoVisible">
+      <code>
 				<slot />
 			</code>
-		</pre>
+    </pre>
+    <div v-else>
+      <slot />
+    </div>
+  </div>
 </template>
 
 <style scoped>
 .demo-container {
-  padding: 1rem;
   border-radius: 8px;
+  padding-inline: 1rem;
   overflow-x: auto;
   margin: 1rem;
   overflow-x: auto;

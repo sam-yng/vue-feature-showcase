@@ -1,8 +1,19 @@
 <script setup lang="ts">
-import CodeContainer from '@/components/CodeContainer.vue'
-import ViewNav from '@/components/ViewNav.vue'
+import { ref } from 'vue'
+import type { Ref } from 'vue'
 
-import { refDemo, reactiveDemo } from '@/snippets/demo'
+import DemoContainer from '@/components/DemoContainer.vue'
+import ViewNav from '@/components/ViewNav.vue'
+import { refDemoCode, reactiveDemoCode } from '@/snippets/demoCode'
+
+const refDemoVisible: Ref<boolean> = ref(false)
+const reactiveDemoVisible: Ref<boolean> = ref(false)
+
+const refDemoCount: Ref<number> = ref(0)
+
+const refIncrementDemo = () => {
+  refDemoCount.value++
+}
 </script>
 
 <template>
@@ -10,12 +21,24 @@ import { refDemo, reactiveDemo } from '@/snippets/demo'
     <ViewNav>
       <h1>Reactivity Fundamentals</h1>
     </ViewNav>
-    <CodeContainer>
-      {{ refDemo }}
-    </CodeContainer>
-    <CodeContainer>
-      {{ reactiveDemo }}
-    </CodeContainer>
+    <DemoContainer v-model:demo-visible="refDemoVisible">
+      <template v-if="!refDemoVisible">
+        {{ refDemoCode }}
+      </template>
+      <template v-else>
+        <button @click="refIncrementDemo">
+          {{ refDemoCount }}
+        </button>
+      </template>
+    </DemoContainer>
+    <DemoContainer v-model:demo-visible="reactiveDemoVisible">
+      <template v-if="!reactiveDemoVisible">
+        {{ reactiveDemoCode }}
+      </template>
+      <template v-else>
+        <h1>hello</h1>
+      </template>
+    </DemoContainer>
   </main>
 </template>
 

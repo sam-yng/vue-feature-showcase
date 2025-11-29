@@ -1,4 +1,4 @@
-export const refDemo = `
+export const refDemoCode = `
   import { ref } from 'vue'
   import type { Ref } from 'vue'
 
@@ -12,7 +12,7 @@ export const refDemo = `
     {{ count }}
   </button>`
 
-export const reactiveDemo = `
+export const reactiveDemoCode = `
   import { reactive } from 'vue'
 
   interface State {
