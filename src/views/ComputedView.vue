@@ -1,8 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ViewNav from '@/components/ViewNav.vue'
+</script>
 
 <template>
   <main>
-    <h1>Computed Properties</h1>
+    <ViewNav>
+      <h1>Computed Properties</h1>
+    </ViewNav>
     <pre>
       <code>
       </code>
