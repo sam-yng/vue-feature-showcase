@@ -24,6 +24,8 @@ const props = defineProps<{ isDemo: boolean }>()
   overflow-x: auto;
   border: 1px;
   border-style: solid;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 code {
   color: white;

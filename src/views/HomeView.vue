@@ -21,7 +21,7 @@ import NavButton from '../components/NavButton.vue'
       <RouterLink class="router-link" to="/computed" customer v-slot="{ navigate, href, isActive }">
         <NavButton :href="href" :active="isActive" @click="navigate">Computer Properties</NavButton>
       </RouterLink>
-      <RouterLink class="router-link" to="/" customer v-slot="{ navigate, href, isActive }">
+      <RouterLink class="router-link" to="/bindings" customer v-slot="{ navigate, href, isActive }">
         <NavButton :href="href" :active="isActive" @click="navigate"
           >Class and Style Bindings</NavButton
         >
